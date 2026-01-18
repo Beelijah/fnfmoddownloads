@@ -1,0 +1,135 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"name": "left"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"name": "down"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 20,
+			"anim": "idle",
+			"indices": [5, 1, 2, 3, 4, 5, 6, 7, 8],
+			"name": "idle"
+		},
+		{
+			"offsets": [0, 0],
+			"loop": true,
+			"fps": 1,
+			"anim": "back",
+			"indices": [],
+			"name": "back"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "fakeUP",
+			"fps": 24,
+			"name": "up",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "fakeLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "fakeRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "fakeDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "static",
+			"fps": 20,
+			"name": "idle",
+			"indices": [8, 8]
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "down"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/cowboy",
+	"position": [5, 370],
+	"healthicon": "cowboy",
+	"flip_x": true,
+	"healthbar_colors": [224, 168, 110],
+	"camera_position": [-50, 140],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": true
+}

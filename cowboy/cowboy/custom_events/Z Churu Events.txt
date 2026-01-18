@@ -1,0 +1,4 @@
+Value 1: event to be triggered, should be a number
+Value 2: nothing
+
+1: healthbar covers, 2: lower notes, 3: appa SNIFF, 4: churu jumpscare, 5: ending appa jumpscare, 6: enable white shaders, 7: disable white shaders

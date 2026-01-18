@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 1],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down",
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3]
+		},
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 20,
+			"anim": "idle",
+			"indices": [5, 1, 2, 3, 4, 5, 6, 7, 8],
+			"name": "idle"
+		},
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "static",
+			"fps": 20,
+			"name": "idle",
+			"indices": [5, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [0, 1],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [1, 2, 3, 3, 3, 3, 3, 3, 3],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "down"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/blythe",
+	"position": [25, 370],
+	"healthicon": "blythe",
+	"flip_x": false,
+	"healthbar_colors": [255, 255, 255],
+	"camera_position": [0, 130],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}
