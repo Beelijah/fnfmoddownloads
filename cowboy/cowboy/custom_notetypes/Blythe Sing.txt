@@ -1,0 +1,8 @@
+rgbShader.b = 0xAAAAAA
+rgbShader.g = 0xDDDDDD
+rgbShader.r = 0xFFFFFF
+
+noteSplashData.r = 0xDDDDDD
+noteSplashData.g = 0xFFFFFF
+
+gfNote = true

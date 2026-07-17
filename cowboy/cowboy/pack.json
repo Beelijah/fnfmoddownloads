@@ -1,0 +1,9 @@
+ {
+	"name": "cowboy",
+	"description": "a cowboy spinoff song - vs scrambled eggs\nfor psych engine 1.0.4",
+	"restart": false,
+	"runsGlobally": false,
+	"color": [224, 168, 110],
+	"discordRPC": "863222024192262205",
+	"iconFramerate": 10
+}

@@ -1,0 +1,177 @@
+-- script by scrambled_egg3
+
+local onDodgeCooldown = false
+local dodgingEnabled = false -- dont worry this is force enabled later
+local normalNoteType = ''
+local dodgeCooldown = 1
+local isDodging = false
+local dodgeTime = 1
+local whiteTime = 0.05
+local isMobile = false
+
+local normalCamX = 0
+local normalCamY = 0
+
+function onCreate()
+	makeLuaText('dodgeWarning', 'PRESS SPACE TO DODGE', 1280, 0, 0)
+	setObjectCamera('dodgeWarning', 'other')
+	setTextAlignment('dodgeWarning', 'center')
+	setProperty('dodgeWarning.y', getProperty('dodgeWarning.y') + 150)
+	setTextSize('dodgeWarning', 64)
+	setTextBorder('dodgeWarning', 5, '000000')
+	addLuaText('dodgeWarning')
+
+	makeLuaSprite('vig', 'vignette')
+	setObjectCamera('vig', 'other')
+	setProperty('vig.alpha', 0)
+	addLuaSprite('vig')
+
+	makeLuaSprite('mobileIndicator', 'hitbox')
+	setObjectCamera('mobileIndicator', 'hud')
+	screenCenter('mobileIndicator', 'x')
+	--addLuaSprite('mobileIndicator', true) -- comment this out pls
+
+	if not downscroll then
+		setProperty('mobileIndicator.y', 530)
+	end
+
+    if getCurrentOrientation() == 'Portrait' or getCurrentOrientation() == 'PortraitUpsideDown' or getCurrentOrientation() == 'LandscapeLeft' or getCurrentOrientation() == 'LandscapeRight' then -- woah i found the deleted source code woah
+        isMobile = true
+	end
+
+	if isMobile then
+		setTextString('dodgeWarning', 'PRESS THE DODGE BUTTON TO DODGE')
+		addLuaSprite('mobileIndicator', true)
+	end
+	
+	setObjectOrder('mobileIndicator', 10)
+
+	initLuaShader('white-noDiscard')
+	initLuaShader('white') -- i know its a super simple shader but sometimes ill enable it and disable it really quickly so better safe than sorry
+end
+
+function onSongStart()
+	playbackDelta = 1 / playbackRate
+
+	doTweenAlpha('dodgeWarningAlpha', 'dodgeWarning', 0, 1)
+end
+
+function onStepHit()
+	if curStep > 47 and curStep < 300 then
+		dodgingEnabled = true
+	end
+
+	if curStep > 1152 then -- disabled for ending cutscene
+		dodgingEnabled = false
+	end
+
+	if curStep > 192 and curStep < 208 then
+		doTweenAlpha('mobileIndicatorAlpha', 'mobileIndicator', 0.7, 1)
+	end
+
+	-- dodgingEnabled = true
+end
+
+function onUpdate(elapsed)
+	--debugPrint(isMobile)
+
+	if keyboardJustPressed('SPACE') then
+		cowboyDodge()
+	end
+
+	if getMouseX('hud') > 294 and getMouseX('hud') < 948 and getMouseY('hud') > 526 and mouseClicked() and isMobile then
+		cowboyDodge()
+	end
+
+	if isDodging then
+		playAnim('boyfriend', 'static', true)
+
+		setCameraFollowPoint(normalCamX, normalCamY) -- dont get mad, just comment this line out and immediately regret it!
+	end
+end
+
+function cowboyDodge()
+	if dodgingEnabled and not onDodgeCooldown then
+		normalCamX = getCameraFollowX()
+		normalCamY = getCameraFollowY()
+		
+		onDodgeCooldown = true
+		isDodging = true
+
+		--if isMobile then
+			setSpriteShader('mobileIndicator', 'white-noDiscard')
+		--end
+
+		setSpriteShader('boyfriend', 'white')
+		doTweenY('cowboyXTween3', 'boyfriend', getProperty('boyfriend.y') + 256 / 1.6, stepCrochet / 5000)
+        startTween('cowboyXTween2', 'boyfriend.scale', {y = 0.5}, stepCrochet / 5000, {ease = 'linear'})
+		
+		runTimer('disableWhiteShader', whiteTime)
+		runTimer('disableDodging', dodgeTime)
+		runTimer('disableDodgeCooldown', dodgeCooldown)
+	end
+end
+
+function onEvent(event, value1, value2, strumTime)
+	if event == 'Z Raymuncito Treats' then -- raymuncito: to the rhythm of despacito "Raymuncito, im gonna eat you like a bean burrito, 'cause my little gatito ray, i love him so much that ill pet him all day-ee-yaya"
+		doTweenAlpha('vigAlpha', 'vig', 0.75, 1)
+		playSound('undertale-create', 0.8)
+		if botPlay then
+			cowboyDodge() -- auto-dodge for noobs/showcasers
+		end
+
+		runTimer('dodgeHIT', 1) -- do not change the 1
+	end
+end
+
+function goodNoteHitPre(index, noteData, noteType, isSustain)
+	if isDodging then
+		setPropertyFromGroup('notes', index, 'noteType', 'No Animation')
+	end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+	if tag == 'dodgeHIT' then
+		if not isDodging then
+			playSound('treatHit')
+
+			if isMobile then
+				addHealth(-0.3)
+			else
+				addHealth(-0.45)
+			end
+		end
+
+		doTweenAlpha('vigAlpha', 'vig', 0, 0.75, 'quartInOut')
+	end
+
+	if tag == 'disableDodgeCooldown' then
+		onDodgeCooldown = false
+	end
+
+	if tag == 'disableDodging' then
+		isDodging = false
+
+		setProperty('boyfriend.y', getProperty('boyfriend.y') - 256 / 1.6)
+		setProperty('boyfriend.scale.y', 1)
+	end
+
+	if tag == 'disableWhiteShader' then
+		removeSpriteShader('boyfriend')
+
+		--if isMobile then
+			removeSpriteShader('mobileIndicator')
+		--end
+	end
+end
+
+function onTweenCompleted(tag, vars)
+	if tag == 'dodgeWarningAlpha' then
+		if curStep < 128 then
+			doTweenAlpha('dodgeWarningAlpha2', 'dodgeWarning', 1, 1)
+		end
+	end
+	if tag == 'dodgeWarningAlpha2' then
+		doTweenAlpha('dodgeWarningAlpha', 'dodgeWarning', 0, 1)
+	end
+end

@@ -1,0 +1,72 @@
+{
+	"storyName": "the",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "none",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"-",
+			"empty",
+			[
+				0,
+				0,
+				0
+			]
+		],
+		[
+			"takeover",
+			"tyler",
+			[
+				55,
+				193,
+				133
+			]
+		],
+		[
+			"blast-processing",
+			"huy",
+			[
+				55,
+				193,
+				133
+			]
+		],
+		[
+			"rivalry",
+			"redguy",
+			[
+				55,
+				193,
+				133
+			]
+		],
+		[
+			"budget-cuts",
+			"egg-drawn",
+			[
+				55,
+				193,
+				133
+			]
+		],
+		[
+			"cross-platform",
+			"mc-egg",
+			[
+				55,
+				193,
+				133
+			]
+		]
+	],
+	"weekCharacters": [
+		"appa",
+		"ray",
+		"blythe"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "eggV2"
+}

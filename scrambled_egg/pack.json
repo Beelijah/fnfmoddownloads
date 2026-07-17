@@ -1,0 +1,9 @@
+ {
+	"name": "vs scrambled eggs v4",
+	"description": "The fourth scrambled_eggs mod\nfor psych engine 1.0.4",
+	"restart": false,
+	"runsGlobally": false,
+	"color": [170, 0, 255],
+	"discordRPC": "863222024192262205",
+	"iconFramerate": 10
+}

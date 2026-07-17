@@ -1,0 +1,41 @@
+{
+	"storyName": "the",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "none",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"stash",
+			"song-blythe",
+			[
+				255,
+				255,
+				253
+			]
+		],
+		[
+			"churu",
+			"millie-song",
+			[
+				175,
+				120,
+				100
+			]
+		],
+		[
+			"cowboy",
+			"song",
+			[
+				215,
+				173,
+				93
+			]
+		]
+	],
+	"weekCharacters": [],
+	"weekName": "cowboy",
+	"hiddenUntilUnlocked": false
+}

@@ -1,0 +1,152 @@
+{
+	"camera_boyfriend": [
+		150,
+		50
+	],
+	"_editorMeta": {
+		"boyfriend": "egg-finale",
+		"gf": "modded-fx",
+		"dad": "redguy-new"
+	},
+	"preload": {
+		"images/stage_light": 2,
+		"images/stagecurtains": 2,
+		"images/stagefront": 3,
+		"images/stageback": 3
+	},
+	"girlfriend": [
+		-809,
+		-210
+	],
+	"stageUI": "",
+	"boyfriend": [
+		770,
+		100
+	],
+	"camera_girlfriend": [
+		50,
+		100
+	],
+	"defaultZoom": 0.55,
+	"objects": [
+		{
+			"x": -429,
+			"y": -1312,
+			"scale": [
+				10,
+				10
+			],
+			"image": "black",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 90,
+			"name": "truebg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -927,
+			"y": -523,
+			"scale": [
+				1,
+				1
+			],
+			"image": "IHY/Ladrillos y ventanas",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bg",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				0.5,
+				0.5
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -792,
+			"y": -227,
+			"scale": [
+				0.75,
+				0.75
+			],
+			"image": "IHY/PuenteCompleto",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "bridge",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1,
+				1
+			],
+			"alpha": 1,
+			"type": "sprite"
+		},
+		{
+			"x": -878,
+			"y": 982,
+			"scale": [
+				1.5,
+				1.45
+			],
+			"image": "IHY/Luigi_IHY_Background_Assets_Lava",
+			"flipX": false,
+			"filters": 3,
+			"color": "FFFFFF",
+			"angle": 0,
+			"name": "lava",
+			"firstAnimation": "idle",
+			"antialiasing": true,
+			"flipY": false,
+			"scroll": [
+				1.1,
+				1.1
+			],
+			"alpha": 1,
+			"animations": [
+				{
+					"loop": true,
+					"offsets": null,
+					"anim": "idle",
+					"fps": 15,
+					"name": "Lava",
+					"indices": []
+				}
+			],
+			"type": "animatedSprite"
+		},
+		{
+			"type": "gf"
+		},
+		{
+			"type": "dad"
+		},
+		{
+			"type": "boyfriend"
+		}
+	],
+	"camera_speed": 1,
+	"directory": "week1",
+	"opponent": [
+		100,
+		100
+	],
+	"camera_opponent": [
+		0,
+		0
+	],
+	"hide_girlfriend": false
+}
